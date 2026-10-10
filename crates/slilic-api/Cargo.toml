@@ -1,0 +1,15 @@
+[package]
+name = "slilic-api"
+description = "宿主与 mod 之间的稳定 C ABI 契约"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme = "../../README.md"
+keywords = ["modding", "plugin", "abi", "ffi", "game"]
+categories = ["game-development", "development-tools::ffi"]
+
+[lib]
+crate-type = ["rlib"]

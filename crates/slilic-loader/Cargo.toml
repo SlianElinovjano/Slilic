@@ -1,0 +1,19 @@
+[package]
+name = "slilic-loader"
+description = "把外部 Rust 源码编译为动态库并加载进宿主进程"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme = "../../README.md"
+keywords = ["modding", "plugin", "dynamic-loading", "jit", "game"]
+categories = ["game-development", "development-tools::ffi"]
+
+[dependencies]
+# 同时写 path 与 version：本地用 path，发布到 crates.io 时必须带上 version，
+# 否则 cargo publish 会因为依赖没有版本号而拒绝。
+slilic-api = { path = "../slilic-api", version = "0.1.0" }
+libloading.workspace = true
+thiserror.workspace = true

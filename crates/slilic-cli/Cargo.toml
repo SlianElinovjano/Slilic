@@ -1,0 +1,21 @@
+[package]
+name = "slilic-cli"
+description = "演示宿主：编译、加载并驱动外部 Rust mod"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+repository.workspace = true
+homepage.workspace = true
+readme = "../../README.md"
+keywords = ["modding", "plugin", "dynamic-loading", "cli", "game"]
+categories = ["game-development", "command-line-utilities"]
+
+[[bin]]
+name = "slilic"
+path = "src/main.rs"
+
+[dependencies]
+slilic-api = { path = "../slilic-api", version = "0.1.0" }
+slilic-loader = { path = "../slilic-loader", version = "0.1.0" }
+thiserror.workspace = true

@@ -1,0 +1,21 @@
+# 这个 manifest 只为了 IDE 支持（rust-analyzer 需要它来解析依赖和补全），
+# 实际编译由 slilic-loader 直接调用 rustc 完成，不经过 cargo。
+#
+# 末尾的空 [workspace] 表把本目录标记为独立的 workspace 根，
+# 避免它被误认为上层 workspace 的成员。
+
+[package]
+name = "example-mod"
+description = "示例 mod"
+version = "0.1.0"
+edition = "2024"
+# 这是给人看的示例，不是要发到 crates.io 的库。
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+slilic-api = { path = "../crates/slilic-api" }
+
+[workspace]

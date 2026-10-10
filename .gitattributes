@@ -1,0 +1,17 @@
+# 统一换行符：仓库里一律存 LF，检出时按各平台自动转换。
+# 否则 Windows 上编辑一次就会把整个文件标成「已修改」，diff 全是噪音。
+* text=auto eol=lf
+
+*.rs    text eol=lf
+*.toml  text eol=lf
+*.md    text eol=lf
+*.lock  text eol=lf
+LICENSE text eol=lf
+
+# 二进制产物不做任何转换
+*.dll   binary
+*.so    binary
+*.dylib binary
+*.pdb   binary
+*.png   binary
+*.ico   binary
